@@ -23,34 +23,32 @@
 
 ```mermaid
 flowchart TD
-    subgraph ChatModes["Copilot Chat — Three Modes (VS Code)"]
-        A[Ask Mode\nAnswer questions\nGet code snippets\nExplain concepts] 
-        B[Plan Mode\nCreate detailed implementation plan\nNo code changes until approved]
-        C[Agent Mode\nAutonomously edits files\nRuns terminal commands\nIterates until task complete]
-    end
+    USER["Developer opens Copilot Chat"]
 
-    subgraph SlashCommands["Key Slash Commands"]
-        D[/explain — Explain selected code]
-        E[/fix — Suggest a bug fix]
-        F[/tests — Generate unit tests]
-        G[/doc — Add documentation comments]
-        H[/simplify — Simplify selected code]
-        I[/feedback — Submit feedback]
-    end
+    USER --> ASK["Ask Mode\nQ&A · code snippets · explanations"]
+    USER --> PLAN["Plan Mode\nDesign plan first\nno edits until approved"]
+    USER --> AGENT["Agent Mode\nAutonomous file edits\nand terminal commands"]
 
-    subgraph ContextAttachments["Context Attachment Options"]
-        J["#file: — Attach a specific file"]
-        K["#selection — Use highlighted code"]
-        L["#codebase — Search entire codebase"]
-        M["@workspace — Reference whole workspace"]
-    end
+    ASK --> CTX["Add context"]
+    PLAN --> CTX
+    AGENT --> CTX
 
-    subgraph CodeSuggestionOptions["Code Suggestion Actions"]
-        N[Copy to clipboard]
-        O[Insert at cursor]
-        P[Create new file]
-        Q[Insert into terminal]
-    end
+    CTX --> F1["file — attach a specific file"]
+    CTX --> F2["selection — use highlighted code"]
+    CTX --> F3["codebase — search entire codebase"]
+
+    ASK --> CMD["Slash commands"]
+    CMD --> C1["slash explain — explain selected code"]
+    CMD --> C2["slash fix — suggest a bug fix"]
+    CMD --> C3["slash tests — generate unit tests"]
+    CMD --> C4["slash doc — add documentation"]
+    CMD --> C5["slash simplify — simplify code"]
+
+    ASK --> OUT["Use suggestion"]
+    OUT --> O1["Copy to clipboard"]
+    OUT --> O2["Insert at cursor"]
+    OUT --> O3["Create new file"]
+    OUT --> O4["Insert into terminal"]
 ```
 
 Notes:
