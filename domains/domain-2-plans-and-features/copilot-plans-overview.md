@@ -33,8 +33,8 @@ flowchart TD
     C -->|Professional paid| G[Copilot Pro\nUnlimited completions + cloud agent]
     C -->|Power user| H[Copilot Pro+\nHighest premium request allowance\nAll models]
 
-    D -->|No — GitHub Free or Team| I[Copilot Business\nOrg policy + audit logs + file exclusions]
-    D -->|Yes — GitHub Enterprise Cloud| J[Copilot Enterprise\nAll Business features +\nGitHub.com Chat, PR summaries,\nKnowledge Bases, custom models]
+    D -->|No - GitHub Free or Team| I[Copilot Business\nOrg policy + audit logs + file exclusions]
+    D -->|Yes - GitHub Enterprise Cloud| J[Copilot Enterprise\nAll Business features +\nGitHub.com Chat, PR summaries,\nKnowledge Bases, custom models]
 
     E & F & G & H --> K[IDE completions\nCopilot Chat IDE\nCLI\nMobile]
     I --> K
