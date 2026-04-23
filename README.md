@@ -17,6 +17,7 @@ A structured, original study guide for the GitHub Copilot certification exam. Co
 | Audience | Developer, DevOps Engineer, App Maker, Technology Manager |
 | Certification page | [Microsoft Learn](https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/) |
 | Practice assessment | [Take practice test](https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/practice/assessment?assessment-type=practice&assessmentId=218035372&practice-assessment-type=certification) |
+| Official exam reference | [learn.github.com](https://learn.github.com/certification/COPILOT) |
 
 ---
 
