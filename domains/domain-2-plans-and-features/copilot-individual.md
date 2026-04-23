@@ -50,48 +50,6 @@ Notes:
 - The jump from Pro+ to Business is not just a feature upgrade — it shifts the billing and governance model entirely from personal to organisational.
 - Data handling is a key differentiator: individual users must opt out of telemetry; organisations have it off by default.
 
-## Practical Examples and Scenarios
-
-### Example 1: Student selecting the right individual plan
-
-- Context: A verified computer science student wants full Copilot access including premium AI models to help with coursework and personal projects, at no cost.
-- Action: They visit GitHub's student developer pack verification page, confirm their student status, and activate Copilot Student on their personal account.
-- Outcome: They receive unlimited inline completions, access to premium Chat models, the cloud agent capability, and a monthly premium-request allowance — functionally equivalent to Copilot Pro — at no charge.
-
-### Example 2: Individual developer opting out of prompt telemetry
-
-- Context: A freelance developer on Copilot Pro is concerned that their client's proprietary code patterns may be used to train GitHub's models.
-- Action: They navigate to **github.com/settings/copilot** and disable the "Allow GitHub to use my code snippets for product improvements" toggle (the prompt and suggestion collection setting).
-- Outcome: Their prompts and Copilot responses are no longer retained for model training. Note: this does not apply organisational policies — if they need guaranteed org-wide exclusions, they would need Business plan.
-
-### Example 3: Comparing IDE features between Pro and Business
-
-- Context: A developer is deciding whether to subscribe to Pro individually or whether their team should move to Business.
-- Action: They compare the feature tables: both plans provide inline suggestions, inline Chat, Chat panel, CLI extension, and mobile. Business adds content exclusion rules, org policy management, audit logs, and formal IP indemnity terms.
-- Outcome: For an individual working alone, Pro is sufficient. For a team where an admin needs to enforce consistent policies and protect the company legally, Business is the right choice.
-
-## Hands-on Practice Checklist
-
-- [ ] Navigate to **github.com/settings/copilot** and locate the "Policies" section; identify the prompt and suggestion collection toggle.
-- [ ] Toggle the "Allow GitHub to use my data for product improvements" option off and back on to observe where individual data controls live.
-- [ ] In VS Code, open the Command Palette (`Ctrl+Shift+P`) and search for "Copilot" to see the full list of available Copilot IDE commands on your current plan.
-- [ ] Compare the model selector in the Copilot Chat panel — note which models are available. Pro users see a curated set; Pro+ users see all available models.
-- [ ] If you have a Pro or Pro+ account, run `gh copilot suggest` and `gh copilot explain` in the terminal to confirm CLI access.
-
-## Common Mistakes and Troubleshooting
-
-- Mistake: Believing individual plan users automatically have IP indemnity on par with Business.
-  Fix: GitHub's Copilot Copyright Commitment (IP indemnity) is most explicitly defined for Business and Enterprise. Individual users should review the current terms for their plan tier.
-
-- Mistake: Assuming opting out of telemetry on an individual plan is the same as content exclusions on Business.
-  Fix: The individual telemetry toggle controls whether prompts are used for model training; content exclusions in Business prevent certain files from ever being read by Copilot as context. These are distinct mechanisms.
-
-- Mistake: Thinking Pro+ and Pro offer the same model access.
-  Fix: Pro provides a curated set of models in Chat (with a monthly premium-request allowance); Pro+ provides access to all available models and a larger premium-request allowance.
-
-- Mistake: Expecting to manage other users' Copilot access on an individual plan.
-  Fix: Individual plans have no seat-management capability. Assigning Copilot to team members requires upgrading to Copilot Business or Enterprise.
-
 ## Quick Recap
 
 - Individual plans: Free (limited), Student (free for verified students), Pro (paid unlimited), Pro+ (all models, largest allowance).
@@ -100,39 +58,11 @@ Notes:
 - All paid individual plans include inline completions, inline Chat, Chat panel, CLI extension, and mobile; Pro+ adds full model access.
 - Individual plans do not include org-level policy management, audit logs, or file exclusion rules.
 
-## Practice Questions
-
-1. By default, does GitHub use a Copilot Pro user's prompts and suggestions for model improvement?
-   - Answer: Yes, by default — but the user can opt out in their personal Copilot settings.
-   - Rationale: Individual plans collect prompt and suggestion telemetry by default. The user must explicitly disable the setting at **github.com/settings/copilot**. This contrasts with Business/Enterprise, where collection is off by default.
-
-2. A solo freelance developer wants unlimited Copilot completions and the ability to access every available AI model in Copilot Chat. Which individual plan should they subscribe to?
-   - Answer: Copilot Pro+.
-   - Rationale: Pro includes unlimited completions and a premium-request allowance but not full access to every model. Pro+ provides the full model catalogue and the highest premium-request allowance.
-
-3. Which of the following features is NOT available on Copilot Pro but IS available on Copilot Business?
-   - Answer: Organisation-wide content exclusion rules (and organisation policy management / audit logs).
-   - Rationale: Content exclusions, org-level policies, and audit logs are Business and Enterprise features. Pro is an individual plan with no organisation governance capabilities.
-
-4. A verified teacher wants free access to Copilot Pro. Is this possible?
-   - Answer: Yes — verified teachers may be eligible for free Copilot Pro access under GitHub's educator program.
-   - Rationale: GitHub extends free Copilot Pro access to verified teachers and maintainers of popular open-source projects, in addition to verified students (who receive Copilot Student).
-
-## Originality Declaration
-
-- This page was written as original instructional content.
-- No protected source text was copied verbatim.
-
 ## Sources Consulted
 
 - https://docs.github.com/en/copilot/get-started/plans
 - https://docs.github.com/en/copilot/get-started/features
 - https://docs.github.com/en/copilot/managing-copilot/managing-copilot-as-an-individual-subscriber/managing-copilot-policies-as-an-individual-subscriber
-
-## Potential Similarity Risk
-
-- Risk level: Low
-- Notes: Plan tier names and feature names are product terms. All explanations, comparisons, and scenarios are independently written. The data-handling contrast is based on documented public policy differences.
 
 ## References
 
