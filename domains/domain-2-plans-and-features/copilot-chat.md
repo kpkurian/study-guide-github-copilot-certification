@@ -57,6 +57,38 @@ Notes:
 - Agent mode is the most autonomous — it may run commands and modify multiple files; always review actions before approving.
 - Slash commands work in the Chat panel, inline Chat, and (where supported) GitHub.com Chat.
 
+## Key Terms
+
+- **Ask mode**: Default Chat mode; answers questions, explains code, and returns code suggestions on request.
+- **Plan mode**: Pre-coding research mode; Copilot produces a detailed implementation plan and waits for approval before writing code.
+- **Agent mode**: Autonomous mode where Copilot edits files and runs terminal commands to complete a multi-step task.
+- **Slash command**: A `/`-prefixed shorthand in Chat that directs Copilot to perform a specific category of task (e.g. `/fix`, `/tests`).
+- **Context attachment**: A variable or reference (e.g. `#file:`, `#selection`) added to a Chat prompt to provide specific context.
+- **Hallucination**: A confident but factually incorrect response produced by an LLM; must be verified by the developer.
+- **Context window**: The maximum amount of text (prompt + history + code) a model can process in a single interaction; finite.
+- **`@workspace`**: A context participant that instructs Chat to search the entire open workspace for relevant files.
+
+## Cheat Sheet
+
+| Slash Command | Purpose |
+|---|---|
+| `/explain` | Explain selected code |
+| `/fix` | Suggest a fix for a bug or issue |
+| `/tests` | Generate unit tests for selected code |
+| `/doc` | Add documentation comments |
+| `/simplify` | Simplify or refactor selected code |
+| `/feedback` | Submit feedback about a response |
+
+| Mode | Edits files? | Waits for approval? | Best for |
+|------|-------------|---------------------|---------|
+| Ask | ❌ | N/A | Q&A, explanations, one-off suggestions |
+| Plan | ❌ | ✅ (plan must be approved) | Large tasks needing design-first |
+| Agent | ✅ | ✅ (actions reviewed) | Autonomous multi-file task execution |
+
+**Code suggestion actions**: Copy · Insert at cursor · Create new file · Insert into terminal
+
+**Limitations**: training cutoff (no real-time data) · finite context window · hallucinations · no internet by default
+
 ## Quick Recap
 
 - Copilot Chat has three modes: Ask (Q&A), Plan (design-first, no code until approved), Agent (autonomous multi-step execution).

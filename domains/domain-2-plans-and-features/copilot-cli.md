@@ -57,6 +57,36 @@ Notes:
 - Plan mode is accessed with `Shift+Tab` from within an interactive session — it does not write code until you approve the plan.
 - `--allow-all` grants Copilot the same file-system and shell permissions as your user account — use only in trusted, controlled environments.
 
+## Key Terms
+
+- **`gh copilot suggest`**: CLI command that takes a natural language description and suggests a shell command to accomplish it.
+- **`gh copilot explain`**: CLI command that accepts a shell command and returns a plain-language explanation of what it does.
+- **Interactive mode**: CLI mode where Copilot engages in a back-and-forth session to refine a command suggestion.
+- **`gh extension install`**: The `gh` CLI command used to install extensions, including the Copilot CLI extension.
+- **`GITHUB_TOKEN`**: Environment variable used to authenticate the `gh` CLI non-interactively (CI/CD scenarios).
+- **Custom instructions**: A plain-text file that provides persistent context to every Copilot CLI interaction (similar to system prompt).
+- **MCP server**: Model Context Protocol server; can be configured in the CLI to extend Copilot with external tool integrations.
+
+## Cheat Sheet
+
+| Command | What it does |
+|---------|-------------|
+| `gh extension install github/gh-copilot` | Install the Copilot CLI extension |
+| `gh copilot suggest "<task>"` | Suggest a shell command for a natural language task |
+| `gh copilot explain "<command>"` | Explain what a shell command does |
+| `gh auth login` | Authenticate `gh` CLI (required before using Copilot) |
+| `gh copilot config` | View or edit Copilot CLI settings |
+
+| Setting | What it controls |
+|---------|-----------------|
+| Custom instructions | Persistent context injected into every prompt |
+| MCP servers | External tool integrations |
+| `--target` flag | Scope suggestion to `shell`, `gh`, or `git` commands |
+
+- Copilot CLI works on macOS, Linux, and Windows (via WSL or natively).
+- `gh copilot suggest` asks follow-up questions in interactive mode to refine the suggestion.
+- Use `gh copilot explain` before running an unfamiliar command for safety.
+
 ## Quick Recap
 
 - GitHub Copilot CLI is available on all paid plans and offers a terminal-native agentic AI experience.

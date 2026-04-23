@@ -50,6 +50,29 @@ Notes:
 - The jump from Pro+ to Business is not just a feature upgrade — it shifts the billing and governance model entirely from personal to organisational.
 - Data handling is a key differentiator: individual users must opt out of telemetry; organisations have it off by default.
 
+## Key Terms
+
+- **Telemetry**: Collection of prompts and suggestions by GitHub to improve the model; ON by default on individual plans.
+- **Prompt/suggestion collection**: The telemetry setting controlling whether code context sent to Copilot is retained for training.
+- **IP indemnity**: Legal protection from GitHub against third-party IP infringement claims for Copilot output; not available on individual plans.
+- **Copilot Student**: Free tier for verified students via GitHub Education; includes unlimited completions and premium model Chat.
+- **Copilot Pro**: Paid individual tier; unlimited completions, cloud agent access, monthly premium request allowance.
+- **Copilot Pro+**: Highest individual tier; all models, highest premium request allowance.
+- **Personal account**: A GitHub account owned by an individual (not an organisation); individual plans are billed here.
+
+## Cheat Sheet
+
+| Plan | Cost | Completions | IP Indemnity | Telemetry default | Key differentiator |
+|------|------|-------------|--------------|-------------------|--------------------|
+| Free | $0 | Limited (monthly cap) | ❌ | ON | Entry-level; quota resets monthly |
+| Student | $0 | Unlimited | ❌ | ON | Requires GitHub Education verification |
+| Pro | ~$10/mo | Unlimited | ❌ | ON | Adds cloud agent + premium requests |
+| Pro+ | ~$39/mo | Unlimited | ❌ | ON | All models; highest premium allowance |
+
+- No individual plan includes org policy management or audit logs.
+- All individual plan telemetry is **opt-out** (user must disable in settings).
+- IP indemnity begins at **Business tier**.
+
 ## Quick Recap
 
 - Individual plans: Free (limited), Student (free for verified students), Pro (paid unlimited), Pro+ (all models, largest allowance).

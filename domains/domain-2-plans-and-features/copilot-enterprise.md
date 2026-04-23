@@ -58,6 +58,34 @@ Notes:
 - PR summaries are generated on demand — Copilot does not automatically post them; the author triggers generation from the PR description editor.
 - Repository indexing happens automatically; no admin configuration is required. Content exclusion policies apply to indexed data before it is shared with Copilot.
 
+## Key Terms
+
+- **GitHub Enterprise Cloud (GHEC)**: The enterprise GitHub hosting tier required to purchase Copilot Enterprise.
+- **Knowledge Base**: A curated collection of repository content indexed by Copilot Enterprise to ground Chat responses in org-specific context.
+- **Semantic index**: A vector-based search index built from repository content; enables Copilot to find relevant code/docs beyond exact keyword matching.
+- **PR summary**: An on-demand Copilot-generated summary of a pull request's changes, generated from the diff.
+- **Custom model**: A fine-tuned AI model trained on org-specific code, available as an alternative to the default model in Copilot Enterprise.
+- **Knowledge Base types**: Supported content includes code snippets, best practices, design patterns, ADRs, API specs, and style guides.
+- **Indexing latency**: Initial repo index takes ~60 seconds; incremental updates are near-instant.
+
+## Cheat Sheet
+
+| Feature | Enterprise only? | Notes |
+|---------|-----------------|-------|
+| GitHub.com Chat | ✅ | Available on GitHub.com website |
+| PR summaries | ✅ | On-demand, user-triggered from PR page |
+| Knowledge Bases | ✅ | Requires repo semantic indexing |
+| Custom models | ✅ | Fine-tuned on org code |
+| Requires GHEC | ✅ | Cannot buy Enterprise without GHEC |
+| Content exclusions | Shared with Business | Exclusions apply to KB indexing too |
+| Audit logs | Shared with Business | Same 180-day retention |
+
+**Knowledge Base content types**: code snippets · best practices · design patterns · ADRs · API specs · style guides
+
+- Initial semantic index: ~60 seconds; incremental updates: seconds.
+- Content exclusions affect what gets indexed into Knowledge Bases.
+- PR summaries are triggered per PR by the user — they are not automatic.
+
 ## Quick Recap
 
 - Copilot Enterprise = all Business features + GitHub.com Chat + PR summaries + Knowledge Bases (Spaces) + repository indexing + custom models.

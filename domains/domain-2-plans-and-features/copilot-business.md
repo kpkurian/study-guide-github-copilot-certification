@@ -53,6 +53,34 @@ Notes:
 - REST API seat management is the preferred approach for organisations with automated onboarding pipelines.
 - Changes to content exclusions can take up to 30 minutes to propagate to IDEs already running; a window reload forces immediate sync.
 
+## Key Terms
+
+- **Content exclusion**: A configuration rule that prevents Copilot from using specific files as context; defined using fnmatch patterns.
+- **fnmatch**: Glob-style pattern matching syntax used for content exclusion rules (e.g. `**/.env`, `*.cfg`); not regex.
+- **Exclusion hierarchy**: Enterprise rules override org rules, which override repo rules.
+- **Org-wide policy**: An admin toggle that enables or disables a specific Copilot feature for all org members.
+- **Audit log**: A record of administrative events (seat changes, policy updates) retained for 180 days; does not capture prompt content.
+- **SIEM**: Security Information and Event Management system; audit logs can be streamed here for retention beyond 180 days.
+- **`manage_billing:copilot` scope**: The OAuth scope required to manage Copilot Business seats via the REST API.
+- **Propagation delay**: Content exclusion changes can take up to 30 minutes to reach active IDE sessions.
+
+## Cheat Sheet
+
+| Topic | Key Exam Fact |
+|-------|--------------|
+| Exclusion pattern syntax | fnmatch (glob), NOT regex |
+| Exclusion hierarchy | Enterprise > Org > Repo |
+| Propagation delay | Up to 30 minutes; force reload IDE window |
+| Audit log retention | 180 days; stream to SIEM for more |
+| Audit log: plan events | `action:copilot` |
+| Audit log: agent activity | `actor:Copilot` |
+| Seat grant event | `action:copilot.cfb_seat_assignment_created` |
+| Seat revoke event | `action:copilot.cfb_seat_assignment_removed` |
+| REST API scope | `manage_billing:copilot` |
+| Telemetry default | OFF (org admin can enable) |
+| Requires GHEC? | No — works with GitHub Free/Team/GHEC |
+| Audit logs record prompts? | No — admin events only |
+
 ## Quick Recap
 
 - Copilot Business adds org governance on top of IDE features: content exclusions, policy management, audit logs, and REST API seat management.

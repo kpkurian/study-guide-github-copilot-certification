@@ -50,6 +50,32 @@ Notes:
 - Enterprise is only purchasable alongside GitHub Enterprise Cloud (GHEC); Business can be purchased independently.
 - Every paid plan includes IDE completions and the CLI extension; GitHub.com Chat is exclusive to Enterprise.
 
+## Key Terms
+
+- **Ghost text**: Passive inline code suggestion shown as greyed-out text as you type; accepted with Tab.
+- **Inline Chat**: Editor overlay invoked with `Ctrl+I` / `Cmd+I`; gives instructions directly at the cursor.
+- **Chat panel**: Persistent conversational sidebar in the IDE; separate from inline Chat.
+- **Premium request**: A metered unit consumed when using non-default (advanced) models or agentic features.
+- **Seat**: A licence unit assigned to one GitHub user granting access to Copilot on an org plan.
+- **Trigger mode**: Any of the surfaces through which a developer can invoke Copilot (ghost text, inline Chat, Chat panel, CLI, GitHub.com Chat, mobile).
+- **Copilot Free**: The no-cost individual tier with monthly caps on completions and chat turns.
+- **Copilot Enterprise**: The org-managed tier that requires GitHub Enterprise Cloud and adds GitHub.com Chat, PR summaries, and Knowledge Bases.
+
+## Cheat Sheet
+
+| Trigger Mode | How to invoke | Available on |
+|---|---|---|
+| Ghost text | Start typing in editor | All plans |
+| Inline Chat | `Ctrl+I` / `Cmd+I` | All plans |
+| Chat panel | Copilot sidebar icon | All plans |
+| GitHub.com Chat | Copilot icon on GitHub.com | Enterprise only |
+| CLI | `gh copilot suggest` / `explain` | All paid plans |
+| Mobile | GitHub mobile app | All paid plans |
+
+- Individual plans (Free–Pro+): self-managed on personal account, no org governance.
+- Org plans (Business/Enterprise): admin-assigned seats, policy controls, audit logs.
+- Only Enterprise requires GitHub Enterprise Cloud (GHEC).
+
 ## Quick Recap
 
 - Six plan tiers exist: Free, Student, Pro, Pro+, Business, Enterprise — moving from self-serve individual to enterprise-grade with governance tools.
